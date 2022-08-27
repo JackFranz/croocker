@@ -881,7 +881,8 @@
   .u-section-2 .u-btn-1 {
     letter-spacing: 1.2px;
     margin-right: 0;
-    padding: 12px 146px 12px 145px;
+    width: 100%;
+    padding: 12px 12px;
   }
 
   .u-section-2 .u-btn-2 {
