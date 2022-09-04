@@ -14,12 +14,39 @@
     <main class="wrapper">
       <div class="player">
         <div class="player-overlay" data-fullscreen="false">
+          <div class="information-container">
+            <h1 class="title">Nombre del anime</h1>
+            <p class="description">
+              Temporada 1 | Episodio 18
+            </p>
+          </div>
           <div class="container">
-            <div class="information-container">
-              <h1 class="title">Nombre del anime</h1>
-              <p class="description">
-                Temporada 1 | Episodio 18
-              </p>
+            <div class="buttons-play">
+              <button
+                aria-label="backward"
+                class="button backward"
+                title="backward"
+                type="button"
+              ></button>
+              <button
+                aria-label="play"
+                class="button play"
+                title="play"
+                type="button"
+              ></button>
+              <button
+                aria-label="pause"
+                class="button pause"
+                hidden
+                title="pause"
+                type="button"
+              ></button>
+              <button
+                aria-label="forward"
+                class="button forward"
+                title="forward"
+                type="button"
+              ></button>
             </div>
             <div class="player-container">
               <div class="video-progress">
@@ -27,31 +54,11 @@
               </div>
               <div class="player-controls">
                 <div class="player-buttons">
-                  <button
-                    aria-label="play"
-                    class="button play"
-                    title="play"
-                    type="button"
-                  ></button>
-                  <button
-                    aria-label="pause"
-                    class="button pause"
-                    hidden
-                    title="pause"
-                    type="button"
-                  ></button>
-                  <button
-                    aria-label="backward"
-                    class="button backward"
-                    title="backward"
-                    type="button"
-                  ></button>
-                  <button
-                    aria-label="forward"
-                    class="button forward"
-                    title="forward"
-                    type="button"
-                  ></button>
+                  <div class="time-container">
+                    <p class="current-time">0:00</p>
+                    <p class="time-separator">|</p>
+                    <p class="duration-video"> 0:00</p>
+                  </div>
                   <button
                     aria-label="volume"
                     class="button volume"
@@ -67,11 +74,6 @@
                   ></button>
                   <div class="volume-progress">
                     <div class="volume-progress-filled"></div>
-                  </div>
-                  <div class="time-container">
-                    <p class="current-time">0:00</p>
-                    <p class="time-separator">/</p>
-                    <p class="duration-video">0:00</p>
                   </div>
                 </div>
                 <div class="expand-container">
@@ -95,8 +97,8 @@
         </div>
         <video
           class="video"
-          poster="https://www.themoviedb.org/t/p/original/jzvYhKbMS1YZp4tdv3AHMAe42F7.jpg"
-          src="https://www1988.ff-04.com/token=U0GQckNIwkqMM6rpEp2ZFw/1662266524/2001:1388::/207/9/e3/f1198b78d61cb7dc89b39eb2d89a4e39-720p.mp4"
+          poster=""
+          src="https://www23.ff-01.com/token=m2Dv5qTfn0QzcwzU282Axg/1662315384/2001:1388::/207/9/e3/f1198b78d61cb7dc89b39eb2d89a4e39-720p.mp4"
         ></video>
       </div>
     </main>

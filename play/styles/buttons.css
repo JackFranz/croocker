@@ -6,6 +6,7 @@
   background-color: transparent;
   background-repeat: none;
   background-position: center;
+  object-fit: contain;
   cursor: pointer;
   margin-right: 30px;
   outline: none;
@@ -15,8 +16,14 @@
   transform: scale(0.9);
 }
 
+.button:hover{
+  transform: scale(1.1);
+  transition: .3s;
+}
+
 .backward {
   background-image: url('../icons/backward.svg');
+  margin-right: 0;
 }
 
 .expand {
@@ -26,14 +33,22 @@
 
 .forward {
   background-image: url('../icons/forward.svg');
+  margin-right: 0;
 }
 
 .pause {
   background-image: url('../icons/pause.svg');
+  margin-right: 0;
+  width: 60px;
+  height: 60px;
 }
 
+
 .play {
-  background-image: url('../icons/play.svg');
+  background-image: url('../icons/centrado.svg');
+  margin-right: 0;
+  width: 60px;
+  height: 60px;
 }
 
 .reduce {
@@ -47,4 +62,20 @@
 
 .volume {
   background-image: url('../icons/volume.svg');
+}
+
+@media only screen and (max-width: 560px) {
+  button {
+    width:18px !important;
+    height: 18px !important;
+    margin-right: 10px !important;
+  }
+  .play{
+    width:50px !important;
+    height: 50px !important;
+  }
+  .pause{
+    width:50px !important;
+    height: 50px !important;
+  }
 }
