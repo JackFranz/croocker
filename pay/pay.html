@@ -28,10 +28,21 @@
         description: 'Temporada 1 | Episodio 1',
         tracks:[{"file":"<?php echo $cc; ?>","label":"Spanish","kind":"captions","default":"true"}],
         captions: {color: '#fff',fontSize: 30,backgroundOpacity: 0},
-        advertising: { 
-          client: "Vast",
-          schedule: {"AdsVast":{"offset":"Pre-roll","tag":"https://www.videosprofitnetwork.com/watch.xml?key=cb8605f162d428be3e76eab2c91b569f"}}
-        }
+        cast: {
+				appid: "EDF7B42C",
+				endscreen: "https://assets-jpcust.jwpsrv.com/watermarks/UhfJXj85.png",
+				loadscreen: "https://assets-jpcust.jwpsrv.com/watermarks/zAWOWPbu.png",
+				logo: "https://assets-jpcust.jwpsrv.com/watermarks/mxQeCt89.png"
+			},
+			advertising: {
+				client: "VAST",
+				schedule: {
+					AdsVast: {
+						offset: "pre",
+						tag: "https://www.videosprofitnetwork.com/watch.xml?key=cb8605f162d428be3e76eab2c91b569f",
+					}
+				}
+			},
       });
     </script>
   </div>
