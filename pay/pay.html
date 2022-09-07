@@ -1,43 +1,39 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLayer</title>
-    <link rel="stylesheet" href="./pay.css" />
-    <style>
-	body{
-           background:#000000;
-	}
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ads and player</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div class='video'>
-  <script src="https://use.fontawesome.com/20603b964f.js"></script>
-  <script type="text/javascript" src="https://content.jwplatform.com/libraries/LJ361JYj.js"></script>
-  <script type="text/javascript">
-    jwplayer.key = 'ypdL3Acgwp4Uh2/LDE9dYh3W/EPwDMuA2yid4ytssfI=';
-    // jwplayer.key = 'ITWMv7t88JGzI0xPwW8I0+LveiXX9SWbfdmt0ArUSyc=';
-  </script>
-  <div id="myElement"></div>
-  <script type="text/javascript">
-    jwplayer("myElement").setup({
-      image: "https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      //aspectratio: "16:9",
-      // width: '100%',
-      height: window.innerHeight,
-      autostart: false,
-      file : 'https://vjs.zencdn.net/v/oceans.mp4',
-      title: 'Nombre del anime',
-      description: 'Temporada 1 | Capitulo 1',
-      tracks:[{"file":"<?php echo $cc; ?>","label":"Spain","kind":"captions","default":"true"}],
-      captions: {color: '#4a44fe',fontSize: 25,backgroundOpacity: 0},
-      
-      }
-    })
-  </script>
-</div>
+    <script src="https://use.fontawesome.com/20603b964f.js"></script>
+    <script type="text/javascript" src="https://content.jwplatform.com/libraries/LJ361JYj.js"></script>
+    <script type="text/javascript">
+      jwplayer.key = 'ypdL3Acgwp4Uh2/LDE9dYh3W/EPwDMuA2yid4ytssfI=';
+      // jwplayer.key = 'ITWMv7t88JGzI0xPwW8I0+LveiXX9SWbfdmt0ArUSyc=';
+    </script>
+    <div id="myElement"></div>
+    <script type="text/javascript">
+      jwplayer("myElement").setup({
+        image: "https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        //aspectratio: "16:9",
+        // width: '100%',
+        height: window.innerHeight,
+        autostart: false,
+        file : 'https://moon-storage-delivery-s13.filemoon.to/hls2/01/00637/whezzwx7rldg_h/master.m3u8?t=X7sqoNWqIigjfJJG4he5JreAIUtVeJm_kdS6MUt9a2s&s=1662563265&e=43200&f=3186450&srv=127.0.0.1&asn=6147&sp=1024',
+        title: 'Oceans',
+        description: 'Temporada 1 | Episodio 1',
+        tracks:[{"file":"<?php echo $cc; ?>","label":"Spanish","kind":"captions","default":"true"}],
+        captions: {color: '#fff',fontSize: 30,backgroundOpacity: 0},
+        advertising: { 
+          client: "Vast",
+          schedule: {"AdsVast":{"offset":"pre","tag":"https://www.videosprofitnetwork.com/watch.xml?key=cb8605f162d428be3e76eab2c91b569f"}}
+        }
+      });
+    </script>
+  </div>
 </body>
 </html>
