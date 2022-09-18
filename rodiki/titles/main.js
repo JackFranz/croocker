@@ -469,3 +469,30 @@ function handleShorthand(e) {
       break;
   }
 }
+
+jQuery(document).ready(function( $ ) {
+
+  $("video").on("pause", function(event) {
+    // Save into local storage,if you change the browser will not work
+    localStorage.setItem(btoa(this.src), this.currentTime);
+  });
+
+  $("video").on("play", function(event) {
+      $storedtime = localStorage.getItem(btoa(this.src));
+      // Get the time from localStorage and play if not at the end.
+      if ($storedtime < this.duration) 
+          this.currentTime = $storedtime;
+
+      this.play();
+  });   
+    
+  //if you close the window and video playing store the current time
+  $(window).on("unload", function(e) {
+     $("video").each(function(index, value) {
+       if ( ! this.paused ) {
+          localStorage.setItem(btoa(this.src), this.currentTime);
+       }
+    });
+  });
+  
+});
